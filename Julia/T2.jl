@@ -1,11 +1,9 @@
-# T2 - Programa básico em Julia
+#= T2 - Esse código apresenta uma biblioteca bem simples - onde podemos realizar 3 operações básicas sobre seu acervo, como adicionar ou excluir livros e também alugá-los =#
 
-#= Esse código apresenta uma biblioteca bem simples - onde podemos realizar 3 operações básicas sobre seu acervo, como adicionar ou excluir livros e também alugá-los =#
+# Função para introduzir o usuário
+intro = name -> println("\nSeja bem-vindo(a) $name!")
 
-# Introduz o usuário
-intro(name) = println("\nSeja bem-vindo(a) $name!")
-
-# Mostra o acervo de livros existente
+# Função para mostrar o acervo de livros existente
 function show_books(lib)
     println("\nLivros disponíveis:\n")
     for book = keys(lib)
@@ -13,10 +11,35 @@ function show_books(lib)
     end
 end
 
-# Livros iniciais
-biblioteca = Dict("Livro 1" => 0, "Livro 2" => 0)
-global continuar = true
+# Função para adicionar novos livros
+# Obs.: ela modifica o conteúdo da biblioteca ("!")
+function add_book!(lib, book_name)
+    lib[book_name] = 0 # Disponível
+end
 
+# Função para excluir livros
+function pop_book!(lib, book_name)
+    if book_name in keys(lib)
+        pop!(lib, book_name)
+    else
+        # Livro inexistente
+        println("ERRO!")
+end
+
+# Função para alugar um livro
+function rent_book!(lib, book_name)
+    if lib[book_name] == 0
+        lib[book_name] = 1 # Indisponível
+    else
+        # Livro já alugado
+        println("ERRO!")
+end
+
+# Livros iniciais 
+biblioteca = Dict("Turma da Monica" => 0,
+ "Percy Jackson" => 0)
+
+global continuar = true
 while continuar == true
     # Mostrando o acervo de livros para o usuário
     show_books(biblioteca)
