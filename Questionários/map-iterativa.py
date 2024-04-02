@@ -1,10 +1,8 @@
 def fmap(f, l):
-    lcopy = list()
-    
-    for num in l:
-        lcopy.append(num*10)
+    for i in range(len(l)):
+        l[i] = f(l[i])
         
-    return lcopy
+    return l
     
     
 def f(e):
@@ -14,4 +12,5 @@ def f(e):
 lista = [1, 2, 3, 4, 5, 6, 7]
 
 # Vamos multiplicar todos os números da lista por 10
-print(fmap(f, lista))
+fmap(f, lista)
+print(lista)
