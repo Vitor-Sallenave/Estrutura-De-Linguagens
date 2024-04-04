@@ -6,4 +6,4 @@ soma x y = x + y
 l3 = foldr soma 0 l1
 l4 = foldr (\x y -> show x ++ y) "" l1
 l5 = foldr (++) "" (map show l1)
-main = print l4
+main = print (l1, l2, l3, l4, l5)
