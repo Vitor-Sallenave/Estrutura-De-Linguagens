@@ -5,4 +5,4 @@ notas = [701, 343, 762,
         568, 789, 873]
 corte = 760
 selecao = filter (> corte) notas
-main = print selecao
+main = print (length selecao) -- número de aprovados
