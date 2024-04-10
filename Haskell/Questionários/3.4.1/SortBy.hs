@@ -3,7 +3,7 @@ import Data.Ord (comparing)
 
 data Candidato = Candidato { nome :: String
                      , idade :: Int
-                     , nota :: Float
+                     , nota :: Int
                      } deriving (Show)
 
 -- Ordena as pessoas primeiro por Nota e depois por Idade: critério de seleção de um vestibular, por exemplo

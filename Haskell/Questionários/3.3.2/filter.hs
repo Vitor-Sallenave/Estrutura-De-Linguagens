@@ -4,5 +4,6 @@ notas = [701, 343, 762,
         580, 900, 694,
         568, 789, 873]
 corte = 760
-selecao = length (filter (> corte) notas)
+selecao = filter (> corte) notas
+main :: IO ()
 main = print selecao -- número de aprovados
