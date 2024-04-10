@@ -1,4 +1,4 @@
-
+-- 1. Descobrindo o menor elemento
 lista = [1, 2, 3, 4]
 
 
