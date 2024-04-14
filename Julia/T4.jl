@@ -1,7 +1,7 @@
-# Definindo um tipo abstrato para identificar figuras geométricas
+# Definindo um supertipo abstrato para identificar figuras geométricas
 abstract type FigGeometrica end
 
-# Tipos de figuras possíveis
+# Tipos de figuras geométricas possíveis
 struct Circulo <: FigGeometrica
     raio::Real
 end
@@ -26,6 +26,7 @@ area(fig::Retangulo) = fig.largura * fig.comprimento
 area(fig::Triangulo) = (fig.base * fig.altura)/2
 area(fig::Quadrado) = fig.lado^2
 
+# Criando instâncias de cada tipo
 c = Circulo(10)
 ret = Retangulo(10, 10)
 tri = Triangulo(10, 5)

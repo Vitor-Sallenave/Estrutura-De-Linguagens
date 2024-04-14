@@ -21,5 +21,8 @@ filtraMasc forms = filter (\pessoa -> sexo pessoa == 'M') forms
 respostas :: [Formulario]
 respostas = [Formulario "Marcia" 29 'F', Formulario "Joao" 33 'M', Formulario "Ana" 22 'F', Formulario "Gilberto" 20 'M']
 
+respostasM :: [Formulario]
+respostasM = filtraMasc respostas
+
 main :: IO ()
 main = print (selecao, filtraMasc respostas)
