@@ -1,6 +1,9 @@
 
+lista::[Int]
 lista = [1, 2, 3]
 
-num = foldr(\x y -> x*10 + y) 0 lista
+lista_to_num::[Int] -> Int
+lista_to_num l = read (foldr (\x acc -> show x ++ acc ) "" l)
 
-main = print num
+main :: IO ()
+main = print (lista_to_num lista)
