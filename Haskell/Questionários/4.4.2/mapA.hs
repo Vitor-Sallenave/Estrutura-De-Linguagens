@@ -10,4 +10,5 @@ f x = x+10
 arv :: Arvore Int
 arv = Galho (Galho (Galho Folha 7 Folha) 3 (Galho Folha 8 Folha)) 1 (Galho (Galho Folha 5 (Galho Folha 6 Folha)) 10 Folha)
 
+main :: IO ()
 main = print (mapA f arv)
